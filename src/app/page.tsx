@@ -1,8 +1,13 @@
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello GAN</h1>
-    </div>
+    <>
+      <Header />
+      <main className='h-screen'>
+        <Hero />
+      </main>
+    </>
   );
 }

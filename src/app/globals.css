@@ -1,24 +1,51 @@
 @import 'tailwindcss';
 
+:root {
+  --shadow-custom-button: 0 8px 8px -4px rgba(73, 93, 207, 0.05);
+}
+
 @theme inline {
   /* spacing */
   --spacing-4.5: 1.125rem;
+  --spacing-17.75: 4.438rem;
+  --spacing-25: 6.25rem;
+  --spacing-27.76: 6.938rem;
+  --spacing-28.5: 7.125rem;
   --spacing-30: 7.5rem;
+  --spacing-36.5: 9.125rem;
+  --spacing-37: 9.25rem;
+  --spacing-37.75: 9.438rem;
   --spacing-39.5: 9.813rem;
   --spacign-41.25: 10.313rem;
+  --spacing-41.5: 10.375rem;
   --spacing-45.5: 11.375rem;
   --spacing-46: 11.5rem;
   --spacing-49: 12.25rem;
+  --spacing-50.5: 12.625rem;
+  --spacing-50.75: 12.688rem;
   --spacing-69.75: 17.438rem;
+  --spacing-75: 18.75rem;
+  --spacing-77.25: 19.313rem;
+  --spacing-77.5: 19.375rem;
+  --spacing-77.75: 19.438rem;
+  --spacing-78.25: 19.563rem;
   --spacing-79.25: 19.813rem;
   --spacing-81.75: 20.438rem;
+  --spacing-85: 21.25rem;
+  --spacing-88: 22rem;
+  --spacing-90: 22.5rem;
   --spacing-99.5: 24.875rem;
   --spacing-112.5: 28.125rem;
+  --spacing-121.5: 30.375rem;
   --spacing-125: 31.25rem;
+  --spacing-135: 33.75rem;
   --spacing-135.25: 33.813rem;
   --spacing-152: 38rem;
+  --spacing-155: 38.75rem;
   --spacing-162.5: 40.625rem;
+  --spacing-170: 42.5rem;
   --spacing-182.75: 45.688rem;
+  --spacing-276: 69rem;
   --spacing-277.75: 69.438rem;
 
   /* colors */
@@ -112,8 +139,36 @@
   --text-preset-7--letter-spacing: 0.25px;
   --text-preset-7--font-weight: 500;
   --text-preset-7--font-style: italic;
+
+  /* radius */
+  --radius-5px: 0.313rem;
 }
 
 body {
   font-family: 'rubik', sans-serif;
+  background-color: var(--color-white);
+}
+
+.shadow-button-blue {
+  box-shadow: var(--shadow-button);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in forwards;
+  transition: all 0.3s ease-in;
 }
