@@ -7,7 +7,9 @@
 @theme inline {
   /* spacing */
   --spacing-4.5: 1.125rem;
+  --spacing-9.25: 2.313rem;
   --spacing-17.75: 4.438rem;
+  --spacing-18: 4.5rem;
   --spacing-25: 6.25rem;
   --spacing-27.76: 6.938rem;
   --spacing-28.5: 7.125rem;
@@ -16,6 +18,7 @@
   --spacing-37: 9.25rem;
   --spacing-37.75: 9.438rem;
   --spacing-39.5: 9.813rem;
+  --spacing-40.75: 10.188rem;
   --spacign-41.25: 10.313rem;
   --spacing-41.5: 10.375rem;
   --spacing-45.5: 11.375rem;
@@ -23,7 +26,10 @@
   --spacing-49: 12.25rem;
   --spacing-50.5: 12.625rem;
   --spacing-50.75: 12.688rem;
+  --spacing-61: 15.25rem;
+  --spacing-65.5: 16.375rem;
   --spacing-69.75: 17.438rem;
+  --spacing-70.5: 17.625rem;
   --spacing-75: 18.75rem;
   --spacing-77.25: 19.313rem;
   --spacing-77.5: 19.375rem;
@@ -36,8 +42,12 @@
   --spacing-90: 22.5rem;
   --spacing-99.5: 24.875rem;
   --spacing-112.5: 28.125rem;
+  --spacing-117: 29.25rem;
+  --spacing-119.5: 29.875rem;
   --spacing-121.5: 30.375rem;
   --spacing-125: 31.25rem;
+  --spacing-126.75: 31.688rem;
+  --spacing-134: 33.5rem;
   --spacing-135: 33.75rem;
   --spacing-135.25: 33.813rem;
   --spacing-152: 38rem;
@@ -53,6 +63,7 @@
   --color-black: #000000;
   --color-blue-950: #242a45;
   --color-blue-600: #5267df;
+  --color-blue-50: #495dcf33;
   --color-grey-600: #5b6074;
   --color-grey-50: #f7f7f7;
   --color-red-400: #fa5959;
@@ -171,4 +182,89 @@ body {
 .animate-fade-in {
   animation: fade-in 0.3s ease-in forwards;
   transition: all 0.3s ease-in;
+}
+
+@keyframes fade-out-under-line {
+  0% {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    width: 10.188rem;
+    left: 4.438rem;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes fade-out-under-line {
+    0% {
+      width: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    100% {
+      width: 100%;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+}
+
+.before-line-enter::before {
+  animation: fade-out-under-line 0.3s ease-out forwards;
+}
+
+.tab-active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4.438rem;
+  height: 0.25rem;
+  width: 10.188rem;
+  background-color: #fa5959;
+}
+
+@media (min-width: 768px) {
+  .tab-active::before {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.animate-fade-out-under-line {
+  animation: fade-out-under-line 0.3s ease-in forwards;
+  transition: all 0.3s ease-in;
+}
+
+/* Add to globals.css */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content-animate {
+  animation: slideInFromLeft 0.4s ease-out forwards;
+}
+
+.illustration-animate {
+  animation: slideInFromRight 0.4s ease-out forwards;
 }
