@@ -1,3 +1,4 @@
+import Download from '@/components/Download';
 import Features from '@/components/Features';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -6,9 +7,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className='mb-40'>
         <Hero />
         <Features />
+        <Download />
       </main>
     </>
   );
