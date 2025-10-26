@@ -284,3 +284,38 @@ body {
 .illustration-animate {
   animation: slideInFromRight 0.4s ease-out forwards;
 }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+/* CSS-only solution */
+details[open] .rotate-icon {
+  transform: rotate(180deg);
+}
+
+/* JavaScript state solution */
+.rotate-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Smooth transition for FAQ content */
+details summary + p {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+  overflow: hidden;
+}
+
+details[open] summary + p {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 500px;
+}
