@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/rizkicaandra/bookmark-landing-page)
-- Live Site URL: [Live Demo](https://friendly-brigadeiros-e5a0ff.netlify.app/)
+- Live Site URL: [Live Demo](https://snazzy-truffle-fcedff.netlify.app/)
 
 ## My process
 
