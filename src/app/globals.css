@@ -2,6 +2,7 @@
 
 :root {
   --shadow-custom-button: 0 8px 8px -4px rgba(73, 93, 207, 0.05);
+  --shadow-custom-button-contact: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
   --shadow-custom-card: 0 10px 20px -5px rgba(73, 93, 207, 0.05);
 }
 
@@ -23,6 +24,7 @@
   --spacing-27.76: 6.938rem;
   --spacing-28.5: 7.125rem;
   --spacing-30: 7.5rem;
+  --spacing-31.5: 7.875rem;
   --spacing-33.25: 8.313rem;
   --spacing-36.5: 9.125rem;
   --spacing-37: 9.25rem;
@@ -41,6 +43,7 @@
   --spacing-69.75: 17.438rem;
   --spacing-70.5: 17.625rem;
   --spacing-75: 18.75rem;
+  --spacing-75.75: 18.938rem;
   --spacing-77.25: 19.313rem;
   --spacing-77.5: 19.375rem;
   --spacing-77.75: 19.438rem;
@@ -48,9 +51,12 @@
   --spacing-79.25: 19.813rem;
   --spacing-81.75: 20.438rem;
   --spacing-85: 21.25rem;
+  --spacing-86: 20.875rem;
   --spacing-88: 22rem;
   --spacing-90: 22.5rem;
   --spacing-99.5: 24.875rem;
+  --spacing-102: 25.5rem;
+  --spacing-110.5: 27.625rem;
   --spacing-112.5: 28.125rem;
   --spacing-112.75: 28.188rem;
   --spacing-117: 29.25rem;
@@ -174,6 +180,10 @@ body {
 
 .shadow-button-blue {
   box-shadow: var(--shadow-custom-button);
+}
+
+.shadow-button-red {
+  box-shadow: var(--shadow-custom-button-contact);
 }
 
 .shadow-card-blue {
